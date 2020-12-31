@@ -25,7 +25,7 @@ $(document).ready(function(){
 //$.post("http://localhost:8000/PaymentProcessOrder/", JSON.stringify({'get_payment':'true', 'payment_id':getUrlParameter('payment_id')}),  function( data ) {
     $.post("https://test2.td.corefactors.in/PaymentProcessOrder/", JSON.stringify({'get_payment':'true', 'payment_id':getUrlParameter('payment_id')}),  function( data ) {
     var options = data;
-    options['callback_url'] = 'http://localhost:8080/payment-success-page.html?payment='+data['order_id']
+    options['callback_url'] = 'https://nagarjunand.github.io/paymentcheck/payment-success-page.html?payment='+data['order_id']
     var rzp1 = new Razorpay(options);
     rzp1.open();
             }).fail(function(e) {
