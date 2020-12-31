@@ -2106,7 +2106,7 @@
         e.preventDefault();
         $.post("https://test2.td.corefactors.in/PaymentProcessOrder/", JSON.stringify(package_info),  function( data ) {
             console.log( data.payment_id['id'] ); 
-            window.location.href = "/free-trial.html?utm_source=web-pricing&utm_medium=web&utm_campaign=try_free&payment_id="+data.payment_id['id'];
+            window.location.href = "free-trial.html?utm_source=web-pricing&utm_medium=web&utm_campaign=try_free&payment_id="+data.payment_id['id'];
             }, "json"); 
         console.log(package_info);
     });
